@@ -40,7 +40,10 @@ class Clicker extends Component {
       if (coupon.price <= clicks) {
         coupons++;
       }
-      
+      //        25                          37                50         75
+      //  ------------------------------------------------------------------>
+      //         ^                           ^                 ^          ^
+      //    updateValue                   clicks            coupon      coupon
       if ((updateValue < clicks && coupon.price > updateValue) ||
         (coupon.price > clicks && coupon.price < updateValue)) {
         updateValue = coupon.price;
